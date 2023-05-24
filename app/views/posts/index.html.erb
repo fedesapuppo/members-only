@@ -1,0 +1,10 @@
+<h1>All Posts</h1>
+<% @posts.each do |post| %>
+  <h3><%= post.title %></h3>
+  <p><%= post.content %></p>
+  <% if user_signed_in? %>
+    <p><strong>Author:</strong> <%= post.author %></p>
+  <% end %>
+  <hr>
+<% end %>
+<%= link_to "Home", home_path %>
