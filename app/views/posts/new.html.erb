@@ -11,7 +11,7 @@
   <% if user_signed_in? %>
     <div>
       <%= form.label :author %>
-      <%= form.text_field :author %>
+      <%= form.text_field :author, value: current_user.email %>
     </div>
   <% end %>
   <div>
